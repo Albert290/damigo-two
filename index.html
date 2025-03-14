@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damigo Automation | Business Process Automation</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header style="padding: 10px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="images/dmg cut logo.png" alt="Damigo Automation Logo" style="height: 8cap; background-color: rgba(255, 255, 255, 0.95); margin-right: 10px;">
+                <h1 style="font-size: 20px; margin: 0; color: #0055b3;">Damigo Automation</h1>
+            </div>
+            <nav style="display: flex; align-items: center;">
+                <div class="mobile-menu-btn" style="display: none; cursor: pointer; font-size: 24px; margin-left: 15px;">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul id="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0;">
+                    <li style="margin-left: 20px;"><a href="#hero" style="text-decoration: none; color: #333; font-weight: 500;">Home</a></li>
+                    <li style="margin-left: 20px;"><a href="#automation" style="text-decoration: none; color: #333; font-weight: 500;">Solutions</a></li>
+                    <li style="margin-left: 20px;"><a href="#services" style="text-decoration: none; color: #333; font-weight: 500;">Services</a></li>
+                    <li style="margin-left: 20px;"><a href="#testimonials" style="text-decoration: none; color: #333; font-weight: 500;">Testimonials</a></li>
+                    <li style="margin-left: 20px;"><a href="#contact" style="text-decoration: none; color: #333; font-weight: 500;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <style>
+    @media screen and (max-width: 768px) {
+        header .logo h1 {
+            font-size: 18px !important;
+        }
+        
+        header .logo img {
+            height: 40px !important;
+        }
+        
+        header nav ul {
+            display: none !important;
+        }
+        
+        header nav ul.active {
+            display: flex !important;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        header nav ul.active li {
+            margin: 0;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+        
+        header .mobile-menu-btn {
+            display: block !important;
+        }
+    }
+    </style>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="colorful-title">
+                <span class="color-red">Run your business</span><span class="color-green">Smarter with zoho</span></h1>
+                <p>We specialize in setting up, training, and optimizing Zoho financial suites for seamless operations and better decision-making.</p>
+                <button class="cta-button" id="quoteBtn">Get Quote Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.jpeg" alt="Business Automation">
+            </div>
+        </div> 
+    </section>
+
+    <!-- Automation Comparison Section -->
+    <section id="automation" class="automation" style="background: linear-gradient(to right, #ff0000, #cc0000); padding: 6rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="background: linear-gradient(45deg, #1a237e, #76ff03); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">Manual vs Automated</h2>
+                <p style="color: yellow;">Experience the transformation from manual to automated business processes</p>
+            </div>
+            
+            <div class="comparison-slider-container">
+                <div class="comparison-item">
+                    <div class="slider-container">
+                        <div class="before-after-slider">
+                            <div class="before-image">
+                                <div class="content">
+                                    <h3>Manual Invoicing</h3>
+                                    <p>Time-consuming Excel spreadsheets</p>
+                                    <img src="images/manual.jpeg" alt="Manual Invoice Process">
+                                </div>
+                            </div>
+                            <div class="after-image">
+                                <div class="content">
+                                    <h3>Automated Invoicing</h3>
+                                    <p>Streamlined Zoho-generated invoices</p>
+                                    <img src="images/automated.png" alt="Automated Invoice Process">
+                                </div>
+                            </div>
+                            <div class="slider-handle">
+                                <div class="handle-line"></div>
+                                <div class="handle-circle">
+                                    <i class="fas fa-arrows-alt-h"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+                
+                <div class="comparison-list">
+                    <div class="comparison-nav">
+                        <button class="prev-comp"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next-comp"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services" style="background: linear-gradient(to right, #ff0000, #cc0000); padding: 6rem 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="position: relative; display: inline-block; margin-bottom: 20px; padding-bottom: 10px; font-size: 2.5rem; background: linear-gradient(45deg, #1a237e, #76ff03); -webkit-background-clip: text; background-clip: text; color: transparent;">
+                    Our Services
+                </h2>
+                <p style="max-width: 700px; margin: 0 auto; color: yellow; font-size: 1.1rem; line-height: 1.6;">
+                    Comprehensive automation solutions powered by Zoho and Sage
+                </p>
+            </div>
+            
+            <div class="partner-badges" style="display: flex; justify-content: center; gap: 3rem; margin: 3rem 0;">
+                <div class="badge" style="display: flex; flex-direction: column; align-items: center; padding: 1.5rem 2rem; border-radius: 12px; background: rgba(255, 82, 82, 0.05); border: 2px solid rgba(255, 82, 82, 0.2); transition: all 0.3s ease;">
+                    <img src="images/zohooo-removebg-preview.png" alt="Zoho Partner" style="width: 180px; height: auto; margin-bottom: 1rem;">
+                    <span style="font-weight: 600; color: #1a237e; font-size: 0.95rem; letter-spacing: 0.5px;">Official Zoho Partner</span>
+                </div>
+                <div class="badge" style="display: flex; flex-direction: column; align-items: center; padding: 1.5rem 2rem; border-radius: 12px; background: rgba(255, 82, 82, 0.05); border: 2px solid rgba(255, 82, 82, 0.2); transition: all 0.3s ease;">
+                    <img src="images/sage1-removebg-preview.png" alt="Sage Partner" style="width: 180px; height: auto; margin-bottom: 1rem;">
+                    <span style="font-weight: 600; color: #1a237e; font-size: 0.95rem; letter-spacing: 0.5px;">Official Sage Partner</span>
+                </div>
+            </div>
+    
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                <!-- Service Card 1 -->
+                <div class="service-card" style="background: white; padding: 2.5rem; border-radius: 16px; text-align: center; border: 2px solid rgba(26, 35, 126, 0.1);">
+                    <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; background: rgba(26, 35, 126, 0.1); border-radius: 50%;">
+                        <i class="fas fa-chart-line" style="font-size: 2.5rem; color: #ff5252;"></i>
+                    </div>
+                    <h3 style="color: #ff5252; margin-bottom: 1rem;">Zoho CRM Integration</h3>
+                    <p style="color: #0056b3; font-size: 0.95rem; line-height: 1.6;">Centralize customer information and streamline your sales pipeline</p>
+                </div>
+    
+                <!-- Service Card 2 -->
+                <div class="service-card" style="background: white; padding: 2.5rem; border-radius: 16px; text-align: center; border: 2px solid rgba(255, 82, 82, 0.1);">
+                    <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; background: rgba(255, 82, 82, 0.1); border-radius: 50%;">
+                        <i class="fas fa-file-invoice-dollar" style="font-size: 2.5rem; color: #ff5252;"></i>
+                    </div>
+                    <h3 style="color: #ff5252; margin-bottom: 1rem;">Sage Accounting</h3>
+                    <p style="color: #0056b3; font-size: 0.95rem; line-height: 1.6;">Automate financial processes and gain real-time insights</p>
+                </div>
+    
+                <!-- Service Card 3 -->
+                <div class="service-card" style="background: white; padding: 2.5rem; border-radius: 16px; text-align: center; border: 2px solid rgba(118, 255, 3, 0.1);">
+                    <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; background: rgba(118, 255, 3, 0.1); border-radius: 50%;">
+                        <i class="fas fa-clipboard-check" style="font-size: 2.5rem; color: #ff5252;"></i>
+                    </div>
+                    <h3 style="color: #ff5252; margin-bottom: 1rem;">Inventory Management</h3>
+                    <p style="color: #0056b3; font-size: 0.95rem; line-height: 1.6;">Real-time tracking and automated stock updates</p>
+                </div>
+    
+                <!-- Service Card 4 -->
+                <div class="service-card" style="background: white; padding: 2.5rem; border-radius: 16px; text-align: center; border: 2px solid rgba(255, 235, 59, 0.1);">
+                    <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; background: rgba(255, 235, 59, 0.1); border-radius: 50%;">
+                        <i class="fas fa-tasks" style="font-size: 2.5rem; color: #ff5252;"></i>
+                    </div>
+                    <h3 style="color: #ff5252; margin-bottom: 1rem;">Workflow Automation</h3>
+                    <p style="color: #0056b3; font-size: 0.95rem; line-height: 1.6;">Custom automation solutions for repetitive business tasks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Selling Points -->
+<section id="benefits" class="benefits" style="background: linear-gradient(to right, #ff0000, #cc0000); padding: 6rem 0;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+            <h2 style="position: relative; display: inline-block; margin-bottom: 20px; padding-bottom: 10px; font-size: 2.5rem; background: linear-gradient(45deg, #1a237e, #76ff03); -webkit-background-clip: text; background-clip: text; color: transparent;">
+                Why Choose Automation?
+            </h2>
+            <p style="max-width: 700px; margin: 0 auto; color: yellow; font-size: 1.1rem; line-height: 1.6;">
+                Transform your business operations with these key benefits
+            </p>
+        </div>
+        
+        <div class="benefits-container" style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+            <!-- Benefit Column 1 -->
+            <div class="benefit-column" style="flex: 1; min-width: 300px;">
+                <div class="benefit-item" style="display: flex; gap: 1.5rem; padding: 2rem; background: white; border-radius: 16px; margin-bottom: 2rem; border-left: 4px solid #ff5252;">
+                    <div class="benefit-icon" style="width: 60px; height: 60px; background: #ff5252; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-bolt" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <div class="benefit-content" style="flex: 1;">
+                        <h3 style="color: #f1c40f; margin-bottom: 0.5rem;">Improved Efficiency</h3>
+                        <p style="color: #4a5568; font-size: 0.95rem;">Reduce manual work by up to 80% and free up valuable time for strategic tasks</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item" style="display: flex; gap: 1.5rem; padding: 2rem; background: white; border-radius: 16px; margin-bottom: 2rem; border-left: 4px solid #76ff03;">
+                    <div class="benefit-icon" style="width: 60px; height: 60px; background: #ff5252; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-pie" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <div class="benefit-content" style="flex: 1;">
+                        <h3 style="color: #f1c40f; margin-bottom: 0.5rem;">Enhanced Accuracy</h3>
+                        <p style="color: #4a5568; font-size: 0.95rem;">Eliminate human error and ensure data consistency across all systems</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefit Column 2 -->
+            <div class="benefit-column" style="flex: 1; min-width: 300px;">
+                <div class="benefit-item" style="display: flex; gap: 1.5rem; padding: 2rem; background: white; border-radius: 16px; margin-bottom: 2rem; border-left: 4px solid #ffeb3b;">
+                    <div class="benefit-icon" style="width: 60px; height: 60px; background: #ff5252; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-tachometer-alt" style="color: #1a237e; font-size: 1.5rem;"></i>
+                    </div>
+                    <div class="benefit-content" style="flex: 1;">
+                        <h3 style="color: #f1c40f; margin-bottom: 0.5rem;">Increased Productivity</h3>
+                        <p style="color: #4a5568; font-size: 0.95rem;">Complete tasks faster and allow your team to focus on growth opportunities</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item" style="display: flex; gap: 1.5rem; padding: 2rem; background: white; border-radius: 16px; margin-bottom: 2rem; border-left: 4px solid #1a237e;">
+                    <div class="benefit-icon" style="width: 60px; height: 60px; background: #ff5252; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-search-dollar" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <div class="benefit-content" style="flex: 1;">
+                        <h3 style="color: #f1c40f; margin-bottom: 0.5rem;">Cost Reduction</h3>
+                        <p style="color: #4a5568; font-size: 0.95rem;">Lower operational costs and achieve a higher ROI with automated systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials" style="position: relative; background: linear-gradient(to right, #ff0000, #cc0000);; padding: 6rem 0;">
+    <div class="wave-top" style="position: absolute; top: -1px; left: 0; width: 100%; height: 100px; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDEyMCI+PHBhdGggZmlsbD0iIzFhMjM3ZSIgZmlsbC1vcGFjaXR5PSIxIiBkPSJNMCw2NEw4MCw1OC43QzE2MCw1MywzMjAsNDMsNDgwLDQ4QzY0MCw1Myw4MDAsNzUsOTYwLDgwQzExMjAsODUsMTI4MCw3NSwxMzYwLDY5LjNMMTQ0MCw2NEwxNDQwLDEyMEwxMzYwLDEyMEMxMjgwLDEyMCwxMTIwLDEyMCw5NjAsMTIwQzgwMCwxMjAsNjQwLDEyMCw0ODAsMTIwQzMyMCwxMjAsMTYwLDEyMCw4MCwxMjBMMCwxMjBaIi8+PC9zdmc+');"></div>
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.5rem; background: linear-gradient(45deg, #1a237e, #76ff03); -webkit-background-clip: text; background-clip: text; color: transparent;" margin-bottom: 15px;">Client Success Stories</h2>
+            <p style="color: #4a5568; max-width: 700px; margin: 0 auto; font-size: 1.1rem;">See how our automation solutions transformed businesses</p>
+        </div>
+        
+        <div class="testimonial-slider" style="position: relative; overflow: hidden;">
+            <div class="testimonial-track" style="display: flex; transition: transform 0.5s ease;">
+                <!-- Testimonial Slide 1 -->
+                <div class="testimonial-slide" style="min-width: 100%; padding: 20px;">
+                    <div class="testimonial-card" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(26, 35, 126, 0.1); position: relative;">
+                        <div class="quote-icon" style="position: absolute; top: 30px; right: 30px; color: #ff5252; font-size: 3rem; opacity: 0.2;">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text" style="font-size: 1.1rem; color: #4a5568; line-height: 1.8; margin-bottom: 30px;">Damigo Automation transformed our invoice processing from a 3-day nightmare to a 10-minute automated task. Their Zoho implementation has been a game-changer.</p>
+                        <div class="testimonial-author" style="display: flex; align-items: center; gap: 20px;">
+                            <div class="author-image" style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #76ff03;">
+                                <img src="/api/placeholder/60/60" alt="Client" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="author-info">
+                                <h4 style="color: #1a237e; margin-bottom: 5px;">Sarah Johnson</h4>
+                                <p style="color: #76ff03; font-size: 0.9rem;">CFO, TechSmart Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Slide 2 -->
+                <div class="testimonial-slide" style="min-width: 100%; padding: 20px;">
+                    <div class="testimonial-card" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(26, 35, 126, 0.1); position: relative;">
+                        <div class="quote-icon" style="position: absolute; top: 30px; right: 30px; color: #ff5252; font-size: 3rem; opacity: 0.2;">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text" style="font-size: 1.1rem; color: #4a5568; line-height: 1.8; margin-bottom: 30px;">After implementing Sage with Damigo's help, our inventory accuracy improved from 70% to 99%. We've eliminated stockouts and reduced carrying costs significantly.</p>
+                        <div class="testimonial-author" style="display: flex; align-items: center; gap: 20px;">
+                            <div class="author-image" style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #ffeb3b;">
+                                <img src="/api/placeholder/60/60" alt="Client" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="author-info">
+                                <h4 style="color: #1a237e; margin-bottom: 5px;">Michael Chen</h4>
+                                <p style="color: #ffeb3b; font-size: 0.9rem;">Operations Director, Global Retail Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Slide 3 -->
+                <div class="testimonial-slide" style="min-width: 100%; padding: 20px;">
+                    <div class="testimonial-card" style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(26, 35, 126, 0.1); position: relative;">
+                        <div class="quote-icon" style="position: absolute; top: 30px; right: 30px; color: #ff5252; font-size: 3rem; opacity: 0.2;">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text" style="font-size: 1.1rem; color: #4a5568; line-height: 1.8; margin-bottom: 30px;">The automated workflow Damigo created has reduced our order processing time by 65%. Customer satisfaction scores have never been higher.</p>
+                        <div class="testimonial-author" style="display: flex; align-items: center; gap: 20px;">
+                            <div class="author-image" style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #ff5252;">
+                                <img src="/api/placeholder/60/60" alt="Client" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="author-info">
+                                <h4 style="color: #1a237e; margin-bottom: 5px;">Emma Rodriguez</h4>
+                                <p style="color: #ff5252; font-size: 0.9rem;">CEO, Streamline Services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-dots" style="display: flex; justify-content: center; gap: 15px; margin-top: 30px;">
+                <span class="dot active" style="width: 12px; height: 12px; border-radius: 50%; background: #1a237e; cursor: pointer;"></span>
+                <span class="dot" style="width: 12px; height: 12px; border-radius: 50%; background: #e2e8f0; cursor: pointer;"></span>
+                <span class="dot" style="width: 12px; height: 12px; border-radius: 50%; background: #e2e8f0; cursor: pointer;"></span>
+            </div>
+
+            <div class="testimonial-nav" style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; justify-content: space-between; padding: 0 20px;">
+                <button class="prev-testimonial" style="width: 40px; height: 40px; border-radius: 50%; border: none; background: #ff5252; color: white; cursor: pointer;">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="next-testimonial" style="width: 40px; height: 40px; border-radius: 50%; border: none; background: #ff5252; color: white; cursor: pointer;">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<!-- Quote Modal -->
+<div id="quoteModal" class="modal" style="display: none; position: fixed; top: 80px; left: 0; width: 100%; height: calc(100% - 80px);; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 999;">
+    <div class="modal-content" style="position: relative; background-color: #fff; padding: 60px; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-left: 5px solid #0055b3; max-width: 700px; width: 90%; margin: 140px auto; max-height: 90vh; overflow-y: auto; border-radius: 4px;">
+        <span class="close-modal" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; color: #cc0000; cursor: pointer;">&times;</span>
+        <h2 style="color: #0055b3; margin-bottom: 25px; text-align: center;">Request a Quote</h2>
+        <form id="quoteForm">
+            <div class="form-section" style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+                <h3 style="color: #cc0000; margin-bottom: 15px;">Company Information</h3>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="companyName" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="industry" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">Industry</label>
+                    <select id="industry" name="industry" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; background-color: #fff;">
+                        <option value="">Select Industry</option>
+                        <option value="retail">Retail</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="finance">Finance</option>
+                        <option value="technology">Technology</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-row" style="display: flex; flex-wrap: wrap; margin: 0 -10px;">
+                    <div class="form-group half" style="flex: 1; min-width: 150px; padding: 0 10px; margin-bottom: 15px;">
+                        <label for="yearsInBusiness" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">Years in Business</label>
+                        <input type="number" id="yearsInBusiness" name="yearsInBusiness" min="0" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div class="form-group half" style="flex: 1; min-width: 150px; padding: 0 10px; margin-bottom: 15px;">
+                        <label for="employees" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">Number of Employees</label>
+                        <input type="number" id="employees" name="employees" min="1" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section" style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+                <h3 style="color: #cc0000; margin-bottom: 15px;">Pain Points</h3>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="painPoints" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">What processes would you like to automate?</label>
+                    <textarea id="painPoints" name="painPoints" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 10px; color: #333; font-weight: bold;">Current Systems</label>
+                    <div class="checkbox-group" style="display: flex; flex-wrap: wrap;">
+                        <label class="checkbox-label" style="display: flex; align-items: center; margin-right: 15px; margin-bottom: 10px; min-width: 150px;">
+                            <input type="checkbox" name="currentSystems" value="excel" style="margin-right: 5px;"> Microsoft Excel
+                        </label>
+                        <label class="checkbox-label" style="display: flex; align-items: center; margin-right: 15px; margin-bottom: 10px; min-width: 150px;">
+                            <input type="checkbox" name="currentSystems" value="quickbooks" style="margin-right: 5px;"> QuickBooks
+                        </label>
+                        <label class="checkbox-label" style="display: flex; align-items: center; margin-right: 15px; margin-bottom: 10px; min-width: 150px;">
+                            <input type="checkbox" name="currentSystems" value="zoho" style="margin-right: 5px;"> Zoho (Some Products)
+                        </label>
+                        <label class="checkbox-label" style="display: flex; align-items: center; margin-right: 15px; margin-bottom: 10px; min-width: 150px;">
+                            <input type="checkbox" name="currentSystems" value="sage" style="margin-right: 5px;"> Sage (Some Products)
+                        </label>
+                        <label class="checkbox-label" style="display: flex; align-items: center; margin-right: 15px; margin-bottom: 10px; min-width: 150px;">
+                            <input type="checkbox" name="currentSystems" value="other" style="margin-right: 5px;"> Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section" style="margin-bottom: 30px;">
+                <h3 style="color: #cc0000; margin-bottom: 15px;">Contact Details</h3>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="contactName" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">Contact Name</label>
+                    <input type="text" id="contactName" name="contactName" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div class="form-row" style="display: flex; flex-wrap: wrap; margin: 0 -10px;">
+                    <div class="form-group half" style="flex: 1; min-width: 150px; padding: 0 10px; margin-bottom: 15px;">
+                        <label for="contactEmail" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div class="form-group half" style="flex: 1; min-width: 150px; padding: 0 10px; margin-bottom: 15px;">
+                        <label for="contactPhone" style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">Phone</label>
+                        <input type="tel" id="contactPhone" name="contactPhone" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn" style="display: block; width: 100%; padding: 15px; background-color: #cc0000; color: white; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#aa0000';" onmouseout="this.style.backgroundColor='#cc0000';">Submit Quote Request</button>
+        </form>
+    </div>
+</div>
+
+<div id="submissionMessage" class="submission-message" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
+    <div class="message-content" style="background-color: white; padding: 30px; border-radius: 5px; text-align: center; max-width: 400px; position: relative; border-top: 5px solid #ffcc00; margin: 100px auto;">
+        <i class="fas fa-check-circle" style="font-size: 50px; color: #0055b3; margin-bottom: 15px;"></i>
+        <h3 style="color: #0055b3; margin-bottom: 10px;">Submitted successfully!</h3>
+        <p style="color: #555; margin-bottom: 20px;">We will respond within 42 hours.</p>
+        <button class="close-message" style="padding: 10px 20px; background-color: #cc0000; color: white; border: none; border-radius: 4px; cursor: pointer;" onmouseover="this.style.backgroundColor='#aa0000';" onmouseout="this.style.backgroundColor='#cc0000';">Close</button>
+    </div>
+</div>
+
+<div id="submissionMessage" class="submission-message" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
+    <div class="message-content" style="background-color: white; padding: 30px; border-radius: 5px; text-align: center; max-width: 400px; position: relative; border-top: 5px solid #ffcc00;">
+        <i class="fas fa-check-circle" style="font-size: 50px; color: #0055b3; margin-bottom: 15px;"></i>
+        <h3 style="color: #0055b3; margin-bottom: 10px;">Submitted successfully!</h3>
+        <p style="color: #555; margin-bottom: 20px;">We will respond within 42 hours.</p>
+        <button class="close-message" style="padding: 10px 20px; background-color: #cc0000; color: white; border: none; border-radius: 4px; cursor: pointer;">Close</button>
+    </div>
+</div>
+</div>
+</div> 
+ <!-- Footer -->
+<footer style="background-color: #0a2463; color: #ff5252; padding: 50px 0 20px; font-family: 'Arial', sans-serif;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <!-- Main footer content with clear structure -->
+        <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            
+            <!-- Company info section -->
+            <div class="footer-logo" style="padding-right: 20px;">
+                <h2 style="color: #ffcc00; font-size: 28px; margin-bottom: 15px;">Damigo Automation</h2>
+                <p style="color: #ff5252; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">Transforming businesses through intelligent automation</p>
+            </div>
+            
+            <!-- Contact section -->
+            <div class="contact-info" style="margin-bottom: 20px;">
+                <h3 style="color: #4caf50; font-size: 20px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e53935;">Get In Touch</h3>
+                
+                <div class="info-item" style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                    <div class="info-icon" style="margin-right: 15px; background-color: #e53935; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-map-marker-alt" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4 style="color: #ffcc00; font-size: 16px; margin-bottom: 5px;">Address</h4>
+                        <p style="color: #ff5252; font-size: 14px; line-height: 1.5; margin: 0;">123 Business Avenue, Suite 200<br>Technology Park, CA 90210</p>
+                    </div>
+                </div>
+                
+                <div class="info-item" style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                    <div class="info-icon" style="margin-right: 15px; background-color: #e53935; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-phone-alt" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4 style="color: #ffcc00; font-size: 16px; margin-bottom: 5px;">Phone</h4>
+                        <p style="color: #ff5252; font-size: 14px; line-height: 1.5; margin: 0;">+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="info-item" style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                    <div class="info-icon" style="margin-right: 15px; background-color: #e53935; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-envelope" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4 style="color: #ffcc00; font-size: 16px; margin-bottom: 5px;">Email</h4>
+                        <p style="color: #ff5252; font-size: 14px; line-height: 1.5; margin: 0;">info@damigoautomation.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Links section -->
+            <div class="link-column">
+                <h3 style="color: #4caf50; font-size: 20px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e53935;">Quick Links</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 12px;">
+                        <a href="#hero" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ff5252'; this.style.paddingLeft='0';">
+                            Home
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#automation" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ffffff'; this.style.paddingLeft='0';">
+                            Solutions
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#services" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ffffff'; this.style.paddingLeft='0';">
+                            Services
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#testimonials" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ffffff'; this.style.paddingLeft='0';">
+                            Testimonials
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Services section -->
+            <div class="link-column">
+                <h3 style="color: #4caf50; font-size: 20px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e53935;">Services</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 12px;">
+                        <a href="#" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ff5252'; this.style.paddingLeft='0';">
+                            Zoho Integration
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ffffff'; this.style.paddingLeft='0';">
+                            Sage Solutions
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ffffff'; this.style.paddingLeft='0';">
+                            Workflow Automation
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#" style="color: #ff5252; text-decoration: none; font-size: 15px; transition: all 0.3s; display: block; padding: 5px 0;" 
+                           onmouseover="this.style.color='#ffcc00'; this.style.paddingLeft='8px';" 
+                           onmouseout="this.style.color='#ffffff'; this.style.paddingLeft='0';">
+                            Custom Solutions
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Social links section -->
+        <div class="social-section" style="text-align: center; margin-bottom: 30px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <h3 style="color: #4caf50; font-size: 18px; margin-bottom: 15px;">Connect With Us</h3>
+            <div class="social-links" style="display: flex; justify-content: center; gap: 15px;">
+                <a href="#" class="social-icon" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #0a2463; border: 2px solid #e53935; border-radius: 50%; color: #ffcc00; text-decoration: none; transition: all 0.3s;"
+                   onmouseover="this.style.backgroundColor='#e53935'; this.style.transform='translateY(-3px)';" 
+                   onmouseout="this.style.backgroundColor='#0a2463'; this.style.transform='translateY(0)';">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #0a2463; border: 2px solid #e53935; border-radius: 50%; color: #ffcc00; text-decoration: none; transition: all 0.3s;"
+                   onmouseover="this.style.backgroundColor='#e53935'; this.style.transform='translateY(-3px)';" 
+                   onmouseout="this.style.backgroundColor='#0a2463'; this.style.transform='translateY(0)';">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #0a2463; border: 2px solid #e53935; border-radius: 50%; color: #ffcc00; text-decoration: none; transition: all 0.3s;"
+                   onmouseover="this.style.backgroundColor='#e53935'; this.style.transform='translateY(-3px)';" 
+                   onmouseout="this.style.backgroundColor='#0a2463'; this.style.transform='translateY(0)';">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Copyright section -->
+        <div class="footer-bottom" style="text-align: center;">
+            <p style="color: #ffffff; font-size: 14px; margin: 0;">&copy; 2025 Damigo Automation. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    // Get DOM elements
+    const quoteBtn = document.getElementById('quoteBtn');
+    const quoteModal = document.getElementById('quoteModal');
+    const closeModal = document.querySelector('.close-modal');
+    const quoteForm = document.getElementById('quoteForm');
+    const submissionMessage = document.getElementById('submissionMessage');
+    const closeMessage = document.querySelector('.close-message');
+    
+    // Open modal when button is clicked
+    quoteBtn.addEventListener('click', function() {
+        quoteModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    });
+    
+    // Close modal when X is clicked
+    closeModal.addEventListener('click', function() {
+        quoteModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    });
+    
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === quoteModal) {
+            quoteModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+    
+    // Handle form submission
+    quoteForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent actual form submission
+        
+        // Here you would typically send the data to your server
+        // For demonstration, we'll just show the success message
+        
+        // Hide modal
+        quoteModal.style.display = 'none';
+        
+        // Show success message
+        submissionMessage.style.display = 'flex';
+    });
+    
+    // Close success message
+    closeMessage.addEventListener('click', function() {
+        submissionMessage.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        
+        // Optional: Reset form
+        quoteForm.reset();
+    });
+    
+    // Close message when clicking outside of it
+    submissionMessage.addEventListener('click', function(event) {
+        if (event.target === submissionMessage) {
+            submissionMessage.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+    
+    // Prevent 'Enter' key from submitting the form unexpectedly
+    window.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.target.matches('textarea')) {
+            e.preventDefault();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            quoteModal.style.display = 'none';
+            submissionMessage.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+}); 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        console.log('Menu clicked!');
+        navMenu.classList.toggle('active');
+    });
+});
+</script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
